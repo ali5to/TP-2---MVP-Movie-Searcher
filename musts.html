@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css" integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY=" crossorigin="anonymous" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <title>Muwis - My list</title>
+</head>
+<body>
+        <header class="fixed w-full bg-black">
+            <div id="offline" class="text-center hidden text-white bg-red-500"><span>Sin conexión</span></div>
+            <nav class="text-white px-5 lg:max-w-7xl md:px-6 container mx-auto">
+                <div class="lg:flex justify-between py-6 w-full items-center">
+                    <div class="flex justify-between">
+                        <a class="text-4xl font-extrabold font-heading tracking-widest" href="index.html">
+                            Muwis <span class="block text-base font-light tracking-normal">& Series</span>
+                        </a>
+                        <button class="text-white inline-flex p-3 rounded lg:hidden ml-auto hover:text-white outline-none nav-toggler" data-target="#navigation">
+                            <i class="material-icons">menu</i>
+                        </button>
+                    </div>
+                    <div class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto font-semibold" id="navigation">
+                        <div class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start text-right flex flex-col lg:h-auto">
+                            <a href="index.html" class="lg:inline-flex lg:w-auto w-full px-3 py-2 text-white items-center justify-center hover:bg-white hover:text-black">
+                            <span>Search</span>
+                            </a>
+                            <a href="list.html" class="lg:inline-flex lg:w-auto w-full px-3 py-2 text-white items-center justify-center hover:bg-white hover:text-black">
+                            <span>My list</span>
+                            </a>
+                            <a href="musts.html" class="lg:inline-flex lg:w-auto w-full px-3 py-2 text-white items-center justify-center hover:bg-white hover:text-black">
+                            <span>Musts</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="banner-secundario items-center flex flex-col justify-center">
+                <h1 class="text-6xl text-black text-center font-extrabold block">You Must See</h1>
+                <p class="text-center block text-2xl font-bold">Our recommendations</p>
+                
+
+            </section>
+
+            <section id="box-mov" class="py-14 md:py-28">
+                <div class="container mx-auto px-10 md:px-16 lg:px-24 lg:max-w-7xl">
+
+                    <div id="movies" class="grid grid-cols-1 gap-y-6">
+                        <div class="card bg-white rounded-sm sahdow-lg overflow-hidden flex flex-col justify-center items-center filter drop-shadow-lg  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                                <article class="flex flex-col-reverse md:flex-row-reverse items-center">
+                                    <div class="px-5 pb-5 pt-3">
+                                        <h2 class="font-bold text-3xl text-red-500 mb-7">Big Fish</h2>
+                                        <div>
+                                            <span><strong>Year:</strong> 2003 - </span>
+                                            <span><strong>Genre:</strong> Adventure, Drama, Fantasy - </span>
+                                            <span><strong>IMDB Rating:</strong> 8.0 - </span>
+                                            <span><strong>Director:</strong> Tim Burton - </span>
+                                            <span><strong>Writer:</strong> Daniel Wallace, John August - </span>
+                                            <span><strong>Actors:</strong> Ewan McGregor, Albert Finney, Billy Crudup</span>
+                                            <p class="mt-6"><strong>Synopsis:</strong> A frustrated son tries to determine the fact from fiction in his dying father's life</p>
+                                        </div>
+                                        
+                                    </div>
+                                    <img class="object-center object-cover h-auto w-full" src="https://m.media-amazon.com/images/M/MV5BMmU3NzIyODctYjVhOC00NzBmLTlhNWItMzBlODEwZTlmMjUzXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg" alt="Poster of Big Fish">
+                                </article>
+                            </div>
+
+                            <div class="card bg-white rounded-sm sahdow-lg overflow-hidden flex flex-col justify-center items-center filter drop-shadow-lg  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                                <article class="flex flex-col-reverse md:flex-row-reverse items-center">
+                                    <div class="px-5 pb-5 pt-3">
+                                        <h2 class="font-bold text-3xl text-red-500 mb-7">The Curious Case of Benjamin Button</h2>
+                                        <div>
+                                            <span><strong>Year:</strong> 2008 - </span>
+                                            <span><strong>Genre:</strong> Drama, Fantasy, Romance - </span>
+                                            <span><strong>IMDB Rating:</strong> 7.8 - </span>
+                                            <span><strong>Director:</strong> David Fincher - </span>
+                                            <span><strong>Writer:</strong> Eric Roth, Robin Swicord, F. Scott Fitzgerald - </span>
+                                            <span><strong>Actors:</strong> Brad Pitt, Cate Blanchett, Tilda Swinton</span>
+                                            <p class="mt-6"><strong>Synopsis:</strong> Tells the story of Benjamin Button, a man who starts aging backwards with consequences.</p>
+                                        </div>
+                                        
+                                    </div>
+                                    <img class="object-center object-cover h-auto w-full" src="https://m.media-amazon.com/images/M/MV5BNjQ0NTY2ODY2M15BMl5BanBnXkFtZTgwMjE4MzkxMDE@._V1_SX300.jpg" alt="Poster of The Curious Case of Benjamin Button">
+                                </article>
+                            </div>
+                            <div class="card bg-white rounded-sm sahdow-lg overflow-hidden flex flex-col justify-center items-center filter drop-shadow-lg  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                                <article class="flex flex-col-reverse md:flex-row-reverse items-center">
+                                    <div class="px-5 pb-5 pt-3">
+                                        <h2 class="font-bold text-3xl text-red-500 mb-7">Sen to Chihiro no kamikakushi</h2>
+                                        <div>
+                                            <span><strong>Year:</strong> 2001 - </span>
+                                            <span><strong>Genre:</strong> Animation, Adventure, Family - </span>
+                                            <span><strong>IMDB Rating:</strong> 8.6 - </span>
+                                            <span><strong>Director:</strong> Hayao Miyazaki - </span>
+                                            <span><strong>Writer:</strong> Hayao Miyazaki - </span>
+                                            <span><strong>Actors:</strong> Daveigh Chase, Suzanne Pleshette, Miyu Irino</span>
+                                            <p class="mt-6"><strong>Synopsis:</strong> During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.</p>
+                                        </div>
+                                        
+                                    </div>
+                                    <img class="object-center object-cover h-auto w-full" src="https://m.media-amazon.com/images/M/MV5BMjlmZmI5MDctNDE2YS00YWE0LWE5ZWItZDBhYWQ0NTcxNWRhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg" alt="Poster of Sen to Chihiro no kamikakushi">
+                                </article>
+                            </div>
+                            <div class="card bg-white rounded-sm sahdow-lg overflow-hidden flex flex-col justify-center items-center filter drop-shadow-lg  transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                                <article class="flex flex-col-reverse md:flex-row-reverse items-center">
+                                    <div class="px-5 pb-5 pt-3">
+                                        <h2 class="font-bold text-3xl text-red-500 mb-7">El laberinto del fauno</h2>
+                                        <div>
+                                            <span><strong>Year:</strong> 2006 - </span>
+                                            <span><strong>Genre:</strong> Drama, Fantasy, War - </span>
+                                            <span><strong>IMDB Rating:</strong> 8.2 - </span>
+                                            <span><strong>Director:</strong> Guillermo del Toro - </span>
+                                            <span><strong>Writer:</strong> Guillermo del Toro - </span>
+                                            <span><strong>Actors:</strong> Ivana Baquero, Ariadna Gil, Sergi López</span>
+                                            <p class="mt-6"><strong>Synopsis:</strong> In the Falangist Spain of 1944, the bookish young stepdaughter of a sadistic army officer escapes into an eerie but captivating fantasy world.</p>
+                                        </div>
+                                        
+                                    </div>
+                                    <img class="object-center object-cover h-auto w-full" src="https://m.media-amazon.com/images/M/MV5BNzJlMjI2NjEtY2FmNy00ZTE0LWJjYWEtZDg0YmY1ZDBlNmEyXkEyXkFqcGdeQXVyOTI5NTk5NTQ@._V1_SX300.jpg" alt="Poster of El laberinto del fauno">
+                                </article>
+                            </div>
+                        
+                        
+
+                    </div>
+                    <div class="flex justify-center items-center hidden" id="loading">
+                        <div
+                          class="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-400"
+                        ></div>
+                      </div>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-black">
+            <div class="text-white px-5 py-10 lg:max-w-7xl md:px-6 container mx-auto flex justify-center items-center">
+                <p class="text-sm md:text-base">© 2021 Todos los Derechos Reservados | <span class="opacity-100 font-bold tracking-widest">Muwis</span></p>
+            </div>
+        </footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+    $(".nav-toggler").each(function(_, navToggler) {
+      var target = $(navToggler).data("target");
+      $(navToggler).on("click", function() {
+        $(target).animate({
+          height: "toggle"
+        });
+      });
+    });
+  });
+  
+</script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="js/register-sw.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
