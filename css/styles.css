@@ -1,0 +1,118 @@
+header {
+    z-index: 2000;
+}
+
+
+#box-mov {
+background: rgb(0,0,0);
+background: linear-gradient(0deg, rgb(24, 24, 24) 0%, rgb(17, 17, 17)0%);
+min-height: 70vh;
+}
+
+    .banner-secundario {
+        padding-top: 100px;
+        min-height: 300px;
+        background-image: url('../img/slaty-popcorn-scattered-on-yellow-background-top-4RG7WF6.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+
+
+    .card {
+        margin: 0 auto;
+        max-width: 700px !important;
+        border-radius: 15px;
+        
+    }
+
+    .inputValue {
+        border-radius: 100px;
+        padding: 10px;
+        font-size: 14px;
+        border: none;
+        outline: none;
+        padding-left: 20px;
+        width: 80%;
+    
+        
+    }
+    
+    
+    .button {
+        border-radius: 100px;
+        padding: 5px 20px;
+        font-size: 14px;
+        font-weight: 500;
+        color: white;
+        margin-left: -90px;
+        z-index: 1000;
+        border: none;
+        margin-top: 0px;
+        width: auto;
+    }
+
+    .button2 {
+        border-radius: 100px;
+        padding: 5px 20px;
+        font-size: 14px;
+        font-weight: 500;
+        color: white;
+        margin-left: -72px;
+        z-index: 1000;
+        border: none;
+        margin-top: 0px;
+        width: auto;
+    }
+
+    form {
+        width: 80%;
+    }
+
+    @media (min-width: 768px) {
+        .banner-secundario {
+            min-height: 400px;
+            background-image: url('../img/slaty-popcorn-scattered-on-yellow-background-top-4RG7WF6.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding-top: 100px;
+        }
+        .inputValue {
+            border-radius: 100px;
+            padding: 22px;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            padding-left: 30px;
+            width: 700px;
+        }
+    
+        .button {
+            border-radius: 100px;
+            padding: 15px 60px;
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+            margin-left: -185px;
+            z-index: 1000;
+            border: none;
+            margin-top: 0px;
+            width: auto;
+        }
+
+        .button2 {
+            border-radius: 100px;
+            padding: 15px 60px;
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+            margin-left: -165px;
+            z-index: 1000;
+            border: none;
+            margin-top: 0px;
+            width: auto;
+        }
+
+    }
