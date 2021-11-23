@@ -34,7 +34,7 @@ let searchText = document.getElementById('searchText');
 if (searchbutton != null) {
     searchbutton.addEventListener('click', () => {
 
-        fetch(`http://www.omdbapi.com/?apikey=49fe4182&t=${searchText.value}`
+        fetch(`https://www.omdbapi.com/?apikey=49fe4182&t=${searchText.value}`
         ).then(function (response) {
             console.log(response);
             return response.json();
